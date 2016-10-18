@@ -28,6 +28,7 @@
     state: present
   when: jenkins_download.changed
   ignore_errors: True
+  failed_when: False
   notify: configure default users
 
 - name: Validate Jenkins is installed and register package name.
