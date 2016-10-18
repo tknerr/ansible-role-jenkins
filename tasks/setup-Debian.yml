@@ -27,6 +27,7 @@
     deb: "/tmp/jenkins_{{ jenkins_version }}_all.deb"
     state: present
   when: jenkins_download.changed
+  ignore_errors: True
   notify: configure default users
 
 - name: Validate Jenkins is installed and register package name.
